@@ -1,0 +1,6 @@
+@import "~antd/dist/antd.css";
+
+.ant-layout-sider,
+.ant-menu.ant-menu-dark {
+    background: #384f65;
+}
