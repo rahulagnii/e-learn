@@ -8117,7 +8117,7 @@ var AdminLayout = function AdminLayout(_ref) {
         }, "cc1"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__.default.Item, {
           icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_10__.default, {}),
           onClick: function onClick() {
-            _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get("/admin");
+            _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get("/admin/semester");
           },
           children: "Semester"
         }, "ss1"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__.default.Item, {
@@ -87113,6 +87113,22 @@ var map = {
 		"./resources/js/Pages/Admin/Parent/List/index.jsx",
 		"resources_js_Pages_Admin_Parent_List_index_jsx"
 	],
+	"./Admin/Semester": [
+		"./resources/js/Pages/Admin/Semester/index.jsx",
+		"resources_js_Pages_Admin_Semester_index_jsx"
+	],
+	"./Admin/Semester/": [
+		"./resources/js/Pages/Admin/Semester/index.jsx",
+		"resources_js_Pages_Admin_Semester_index_jsx"
+	],
+	"./Admin/Semester/index": [
+		"./resources/js/Pages/Admin/Semester/index.jsx",
+		"resources_js_Pages_Admin_Semester_index_jsx"
+	],
+	"./Admin/Semester/index.jsx": [
+		"./resources/js/Pages/Admin/Semester/index.jsx",
+		"resources_js_Pages_Admin_Semester_index_jsx"
+	],
 	"./Admin/Student/Add": [
 		"./resources/js/Pages/Admin/Student/Add/index.jsx",
 		"resources_js_Pages_Admin_Student_Add_index_jsx"
@@ -87160,6 +87176,22 @@ var map = {
 	"./Admin/Student/List/index.jsx": [
 		"./resources/js/Pages/Admin/Student/List/index.jsx",
 		"resources_js_Pages_Admin_Student_List_index_jsx"
+	],
+	"./Admin/Subject": [
+		"./resources/js/Pages/Admin/Subject/index.jsx",
+		"resources_js_Pages_Admin_Subject_index_jsx"
+	],
+	"./Admin/Subject/": [
+		"./resources/js/Pages/Admin/Subject/index.jsx",
+		"resources_js_Pages_Admin_Subject_index_jsx"
+	],
+	"./Admin/Subject/index": [
+		"./resources/js/Pages/Admin/Subject/index.jsx",
+		"resources_js_Pages_Admin_Subject_index_jsx"
+	],
+	"./Admin/Subject/index.jsx": [
+		"./resources/js/Pages/Admin/Subject/index.jsx",
+		"resources_js_Pages_Admin_Subject_index_jsx"
 	],
 	"./Admin/Teacher/Add": [
 		"./resources/js/Pages/Admin/Teacher/Add/index.jsx",
@@ -87563,7 +87595,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Admin_index_jsx":1,"resources_js_Pages_Admin_Courses_index_jsx":1,"resources_js_Pages_Admin_Department_index_jsx":1,"resources_js_Pages_Admin_Parent_Add_index_jsx":1,"resources_js_Pages_Admin_Parent_Edit_index_jsx":1,"resources_js_Pages_Admin_Parent_List_index_jsx":1,"resources_js_Pages_Admin_Student_Add_index_jsx":1,"resources_js_Pages_Admin_Student_Edit_index_jsx":1,"resources_js_Pages_Admin_Student_List_index_jsx":1,"resources_js_Pages_Admin_Teacher_Add_index_jsx":1,"resources_js_Pages_Admin_Teacher_Edit_index_jsx":1,"resources_js_Pages_Admin_Teacher_List_index_jsx":1,"resources_js_Pages_Farmer_index_jsx":1,"resources_js_Pages_Farmer_Notification_List_index_jsx":1,"resources_js_Pages_Farmer_Notification_View_index_jsx":1,"resources_js_Pages_Farmer_Status_List_index_jsx":1,"resources_js_Pages_Home_index_jsx":1,"resources_js_Pages_Home_Register_index_jsx":1,"resources_js_Pages_Home_assets_1_jpg":1,"resources_js_Pages_Home_assets_2_jpg":1,"resources_js_Pages_Home_assets_3_jpg":1,"resources_js_Pages_Home_assets_4_jpg":1,"resources_js_Pages_Home_style_css":1,"resources_js_Pages_Officer_index_jsx":1,"resources_js_Pages_Officer_Approved_List_index_jsx":1,"resources_js_Pages_Officer_Farmer_List_index_jsx":1,"resources_js_Pages_Officer_Notification_Add_index_jsx":1,"resources_js_Pages_Officer_Notification_Edit_index_jsx":1,"resources_js_Pages_Officer_Notification_List_index_jsx":1,"resources_js_Pages_Officer_Pending_List_index_jsx":1,"resources_js_Pages_Officer_Pending_View_index_jsx":1,"resources_js_Pages_Officer_Pending_View_idcard_jpg":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Admin_index_jsx":1,"resources_js_Pages_Admin_Courses_index_jsx":1,"resources_js_Pages_Admin_Department_index_jsx":1,"resources_js_Pages_Admin_Parent_Add_index_jsx":1,"resources_js_Pages_Admin_Parent_Edit_index_jsx":1,"resources_js_Pages_Admin_Parent_List_index_jsx":1,"resources_js_Pages_Admin_Semester_index_jsx":1,"resources_js_Pages_Admin_Student_Add_index_jsx":1,"resources_js_Pages_Admin_Student_Edit_index_jsx":1,"resources_js_Pages_Admin_Student_List_index_jsx":1,"resources_js_Pages_Admin_Subject_index_jsx":1,"resources_js_Pages_Admin_Teacher_Add_index_jsx":1,"resources_js_Pages_Admin_Teacher_Edit_index_jsx":1,"resources_js_Pages_Admin_Teacher_List_index_jsx":1,"resources_js_Pages_Farmer_index_jsx":1,"resources_js_Pages_Farmer_Notification_List_index_jsx":1,"resources_js_Pages_Farmer_Notification_View_index_jsx":1,"resources_js_Pages_Farmer_Status_List_index_jsx":1,"resources_js_Pages_Home_index_jsx":1,"resources_js_Pages_Home_Register_index_jsx":1,"resources_js_Pages_Home_assets_1_jpg":1,"resources_js_Pages_Home_assets_2_jpg":1,"resources_js_Pages_Home_assets_3_jpg":1,"resources_js_Pages_Home_assets_4_jpg":1,"resources_js_Pages_Home_style_css":1,"resources_js_Pages_Officer_index_jsx":1,"resources_js_Pages_Officer_Approved_List_index_jsx":1,"resources_js_Pages_Officer_Farmer_List_index_jsx":1,"resources_js_Pages_Officer_Notification_Add_index_jsx":1,"resources_js_Pages_Officer_Notification_Edit_index_jsx":1,"resources_js_Pages_Officer_Notification_List_index_jsx":1,"resources_js_Pages_Officer_Pending_List_index_jsx":1,"resources_js_Pages_Officer_Pending_View_index_jsx":1,"resources_js_Pages_Officer_Pending_View_idcard_jpg":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

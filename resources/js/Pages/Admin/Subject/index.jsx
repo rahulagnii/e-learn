@@ -2,7 +2,7 @@ import { Inertia } from "@inertiajs/inertia";
 import { Button, Table, Modal, Form, Input, Select } from "antd";
 import React, { useCallback, useEffect, useState } from "react";
 
-const Course = ({ courses, departments }) => {
+const Semester = ({ courses, semesters }) => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [page, setPage] = useState(1);
     const [action, setAction] = useState();
@@ -16,7 +16,7 @@ const Course = ({ courses, departments }) => {
     const showAddModal = () => {
         setAction("Add");
         setIsModalVisible(true);
-        setInitialValues({ course: "" });
+        setInitialValues({ semester: "" });
     };
 
     const showEditModal = useCallback(
@@ -26,10 +26,10 @@ const Course = ({ courses, departments }) => {
             setInitialValues({
                 id: data.id,
                 course: data.course,
-                department: data.department,
+                semester: data.semester,
             });
         },
-        [initialValues, action, courses]
+        [initialValues, action, semesters]
     );
 
     const reset = () => {
@@ -51,14 +51,14 @@ const Course = ({ courses, departments }) => {
             width: 50,
         },
         {
-            title: "Department",
-            dataIndex: "department",
-            key: "department",
-        },
-        {
             title: "Course",
             dataIndex: "course",
             key: "course",
+        },
+        {
+            title: "Semester",
+            dataIndex: "semester",
+            key: "semester",
         },
     ];
 
@@ -103,8 +103,8 @@ const Course = ({ courses, departments }) => {
                     initialValues={initialValues}
                 >
                     <Form.Item
-                        name="department"
-                        label="Department"
+                        name="course"
+                        label="Course"
                         rules={[
                             {
                                 required: true,
@@ -115,20 +115,20 @@ const Course = ({ courses, departments }) => {
                             <Option disabled value="">
                                 Select
                             </Option>
-                            {departments.map(({ department, id }) => (
+                            {courses.map(({ course, id }) => (
                                 <Option key={`dep${id}`} value={id}>
-                                    {department}
+                                    {course}
                                 </Option>
                             ))}
                         </Select>
                     </Form.Item>
                     <Form.Item
-                        name="course"
-                        label="Course"
+                        name="semester"
+                        label="Semester"
                         rules={[
                             {
                                 required: true,
-                                message: "Please input a course name!",
+                                message: "Please input a semester name!",
                                 whitespace: true,
                             },
                         ]}
@@ -147,7 +147,7 @@ const Course = ({ courses, departments }) => {
                                 danger
                                 onClick={() => {
                                     Inertia.delete(
-                                        `/admin/course/${initialValues.id}`
+                                        `/admin/semester/${initialValues.id}`
                                     );
                                     reset();
                                 }}
@@ -164,4 +164,4 @@ const Course = ({ courses, departments }) => {
     );
 };
 
-export default Course;
+export default Semester;

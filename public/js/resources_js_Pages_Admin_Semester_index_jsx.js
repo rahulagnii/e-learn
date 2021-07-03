@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Admin_Courses_index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Admin_Semester_index_jsx"],{
 
 /***/ "./node_modules/@ant-design/icons-svg/es/asn/CaretDownOutlined.js":
 /*!************************************************************************!*\
@@ -12274,10 +12274,10 @@ Schema.validators = validators;
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Admin/Courses/index.jsx":
-/*!****************************************************!*\
-  !*** ./resources/js/Pages/Admin/Courses/index.jsx ***!
-  \****************************************************/
+/***/ "./resources/js/Pages/Admin/Semester/index.jsx":
+/*!*****************************************************!*\
+  !*** ./resources/js/Pages/Admin/Semester/index.jsx ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12313,9 +12313,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Course = function Course(_ref) {
+var Subject = function Subject(_ref) {
   var courses = _ref.courses,
-      departments = _ref.departments;
+      semesters = _ref.semesters;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -12350,7 +12350,7 @@ var Course = function Course(_ref) {
     setAction("Add");
     setIsModalVisible(true);
     setInitialValues({
-      course: ""
+      semester: ""
     });
   };
 
@@ -12360,9 +12360,9 @@ var Course = function Course(_ref) {
     setInitialValues({
       id: data.id,
       course: data.course,
-      department: data.department
+      semester: data.semester
     });
-  }, [initialValues, action, courses]);
+  }, [initialValues, action, semesters]);
 
   var reset = function reset() {
     form.resetFields();
@@ -12383,13 +12383,13 @@ var Course = function Course(_ref) {
     },
     width: 50
   }, {
-    title: "Department",
-    dataIndex: "department",
-    key: "department"
-  }, {
     title: "Course",
     dataIndex: "course",
     key: "course"
+  }, {
+    title: "Semester",
+    dataIndex: "semester",
+    key: "semester"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(antd__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -12428,8 +12428,8 @@ var Course = function Course(_ref) {
         scrollToFirstError: true,
         initialValues: initialValues,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(antd__WEBPACK_IMPORTED_MODULE_3__.default.Item, {
-          name: "department",
-          label: "Department",
+          name: "course",
+          label: "Course",
           rules: [{
             required: true
           }],
@@ -12442,21 +12442,21 @@ var Course = function Course(_ref) {
               disabled: true,
               value: "",
               children: "Select"
-            }), departments.map(function (_ref2) {
-              var department = _ref2.department,
+            }), courses.map(function (_ref2) {
+              var course = _ref2.course,
                   id = _ref2.id;
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Option, {
                 value: id,
-                children: department
+                children: course
               }, "dep".concat(id));
             })]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(antd__WEBPACK_IMPORTED_MODULE_3__.default.Item, {
-          name: "course",
-          label: "Course",
+          name: "semester",
+          label: "Semester",
           rules: [{
             required: true,
-            message: "Please input a course name!",
+            message: "Please input a semester name!",
             whitespace: true
           }],
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__.default, {})
@@ -12470,7 +12470,7 @@ var Course = function Course(_ref) {
             className: "float-right",
             danger: true,
             onClick: function onClick() {
-              _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.delete("/admin/course/".concat(initialValues.id));
+              _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.delete("/admin/semester/".concat(initialValues.id));
               reset();
             },
             children: "Delete"
@@ -12481,7 +12481,7 @@ var Course = function Course(_ref) {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Course);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Subject);
 
 /***/ }),
 

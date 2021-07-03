@@ -87,7 +87,7 @@ const AdminLayout = ({ children }) => {
                         key="ss1"
                         icon={<TeamOutlined />}
                         onClick={() => {
-                            Inertia.get("/admin");
+                            Inertia.get("/admin/semester");
                         }}
                     >
                         Semester

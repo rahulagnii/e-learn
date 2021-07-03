@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminTeacherController;
 use App\Http\Controllers\AccidentController;
 use App\Http\Controllers\AdminCourseController;
 use App\Http\Controllers\AdminDepartmentController;
+use App\Http\Controllers\AdminSemesterController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -55,6 +56,11 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/course', [AdminCourseController::class, 'store'])->name('admin.course.store');
     Route::put('/admin/course/{course}', [AdminCourseController::class, 'update'])->name('admin.course.update');
     Route::delete('/admin/course/{course}', [AdminCourseController::class, 'destroy'])->name('admin.course.destroy');
+
+    Route::get('/admin/semester', [AdminSemesterController::class, 'index'])->name('admin.semester.index');
+    Route::post('/admin/semester', [AdminSemesterController::class, 'store'])->name('admin.semester.store');
+    Route::put('/admin/semester/{semester}', [AdminSemesterController::class, 'update'])->name('admin.semester.update');
+    Route::delete('/admin/semester/{semester}', [AdminSemesterController::class, 'destroy'])->name('admin.semester.destroy');
 });
 
 
